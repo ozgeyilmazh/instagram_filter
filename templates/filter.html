@@ -1,0 +1,95 @@
+  
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+            <div class="container" style="margin-top: 100px; margin-bottom: 100px;">
+
+                <hr class="mt-2 mb-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="c">
+                            <h2>Filter 1</h2>
+                            <div class="col-lg-12">
+                                <img src="{% static 'images/original.jpg' %}" alt="Avatar" class="imagee">
+                            <div class="overlay">
+                              
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-6">
+                        <div class="c">
+                            <h2>Filter 2</h2>
+                            <div class="col-lg-12">
+                                <img src="{% static 'images/original.jpg' %}" alt="Avatar" class="imagee">
+                            <div class="overlay2">
+                              
+                            </div>
+                        </div>
+                       
+                        </div>
+                    </div>       
+                      
+                </div>
+
+                <hr class="mt-2 mb-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="c">
+                            <h2>Filter 3</h2>
+                            <div class="col-lg-12">
+                                <img src="{% static 'images/original.jpg' %}" alt="Avatar" class="imagee">
+                            <div class="overlay3">
+                              
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="c">
+                            <h2>Filter 4</h2>
+                            <div class="col-lg-12">
+                                <img src="{% static 'images/original.jpg' %}" alt="Avatar" class="imagee">
+                            <div class="overlay4">
+                              
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+
+                <hr class="mt-2 mb-5">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <h3>Your photo: </h3>
+                            <img class="img-fluid img-thumbnail" src="{{ photo.images.url }}" alt="">
+                    </div>
+                    <div class="col-lg-8" style="margin-top: 12%;">
+                        <form action="{% url 'filter1' photo.pk %}"  method="POST">
+                            {% csrf_token %}
+                            <input type="submit" value="Apply Filter 1">
+                        </form>
+                        <form action="{% url 'filter2' photo.pk %}"  method="POST">
+                            {% csrf_token %}
+                            <input type="submit" value="Apply Filter 2">
+                        </form>
+                        <form action="{% url 'filter3' photo.pk %}"  method="POST">
+                            {% csrf_token %}
+                            <input type="submit" value="Apply Filter 3">
+                        </form>
+                        <form action="{% url 'filter4' photo.pk %}"  method="POST">
+                            {% csrf_token %}
+                            <input type="submit" value="Apply Filter 4">
+                        </form>
+                    </div>
+
+                </div>
+            </div>             
+      
+{% endblock %}
+        
+        

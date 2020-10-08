@@ -1,0 +1,12 @@
+2020-09-13 17:02:51,295 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2020-09-13 17:02:51,295 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\ozgey\Desktop\instagram_filtre\venv\lib\site-packages\instabot\bot\bot.py
+2020-09-13 17:02:51,296 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2020-09-13 17:02:51,619 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2020-09-13 17:02:51,966 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2020-09-13 17:02:52,242 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2020-09-13 17:02:52,523 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2020-09-13 17:02:54,307 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [400]>
+2020-09-13 17:02:54,308 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message": "challenge_required", "challenge": {"url": "https://i.instagram.com/challenge/7847183430/IP5hNUJujk/", "api_path": "/challenge/7847183430/IP5hNUJujk/", "hide_webview_header": true, "lock": true, "logout": false, "native_flow": true}, "status": "fail", "error_type": "checkpoint_challenge_required"}'
+2020-09-13 17:02:54,308 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2020-09-13 17:02:54,309 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: challenge_required
+2020-09-13 17:02:54,313 - instabot version: 0.117.0 (api) - INFO - Error type: checkpoint_challenge_required

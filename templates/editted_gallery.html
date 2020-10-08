@@ -1,0 +1,32 @@
+  
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+        <div class="row" style="margin-top: 100px; margin-bottom: 100px;"> 
+            <div class="container">
+              
+                <hr class="mt-2 mb-5">
+
+                <div class="row text-center text-lg-left">
+                    {% for p in photos %}
+                    {% if p.is_editted %}
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a href="{{ p.editted_images.url }}" download="{{ p.editted_images.url }}" class="d-block mb-4 h-100">
+                            <img class="img-fluid img-thumbnail" src="{{ p.editted_images.url }}" alt="">
+                            </a>
+                    </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+
+                <hr class="mt-2 mb-5">
+            </div>             
+            
+        </div>
+
+   
+{% endblock %}
+        
+        

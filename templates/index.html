@@ -1,0 +1,33 @@
+  
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="col-md-12 image"  style="margin-top: 100px;">
+                <h1>Create your own gallery
+                    <br>
+                    {% if not user.is_authenticated %}
+                    <small style="font-size: 11px; float: right;"> ( But you need to login first )  </small>
+                    {% endif %}
+                </h1>
+            </div>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="row" style="margin-top: 100px; margin-bottom: 100px;">     
+            <div class="col-md-12">
+                <h3>Load your photos</h3>
+                <form method="POST" action="{% url 'index' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input class="button" type="file" name="images" multiple/>
+                    <input class="button" type="submit" value="Upload images">
+                </form>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+   
+{% endblock %}
+        
+        

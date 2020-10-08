@@ -1,0 +1,6 @@
+Django==2.2.4
+opencv-python
+matplotlib
+numpy
+Pillow
+instapy-cli
